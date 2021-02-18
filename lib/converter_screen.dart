@@ -27,32 +27,20 @@ class ConverterScreen extends StatelessWidget {
     // Here is just a placeholder for a list of mock units
     final unitWidgets = units.map((Unit unit) {
       // TODO: Set the color for this Container
-      return Scaffold(
-        body: Container(
-          margin: EdgeInsets.all(8.0),
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            children: <Widget>[
-              Text(
-                unit.name,
-                style: Theme.of(context).textTheme.headline,
-              ),
-              Text(
-                'Conversion: ${unit.conversion}',
-                style: Theme.of(context).textTheme.headline,
-              ),
-            ],
-          ),
-        ),
-        appBar: AppBar(
-          title: Text(this.title),
-          backgroundColor: this.color,
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.arrow_back),
-          onPressed: () {
-            _navigateToConverter(context);
-          },
+      return Container(
+        margin: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Text(
+              unit.name,
+              style: Theme.of(context).textTheme.headline,
+            ),
+            Text(
+              'Conversion: ${unit.conversion}',
+              style: Theme.of(context).textTheme.headline,
+            ),
+          ],
         ),
       );
     }).toList();
