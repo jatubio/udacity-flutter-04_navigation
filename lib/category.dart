@@ -32,7 +32,6 @@ class Category extends StatelessWidget {
             color: color,
           ),
         ),
-      ),
     );
   }
 
