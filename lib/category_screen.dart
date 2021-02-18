@@ -3,8 +3,8 @@ import 'category.dart';
 
 final _backGroundColor = Colors.green[100];
 
-class CategoryRoute extends StatelessWidget {
-  const CategoryRoute();
+class CategoryScreen extends StatelessWidget {
+  const CategoryScreen();
 
   static const _categoryNames = <String>[
     'Length',
