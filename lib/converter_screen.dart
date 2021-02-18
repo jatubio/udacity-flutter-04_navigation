@@ -50,7 +50,7 @@ class ConverterScreen extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.arrow_back),
-          onPressed: _navigateToConverter(),
+          onPressed: _navigateToConverter(context),
         ),
       );
     }).toList();
