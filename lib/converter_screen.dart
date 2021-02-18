@@ -41,6 +41,7 @@ class ConverterScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headline,
             ),
           ],
+        ),
       );
     }).toList();
 
