@@ -30,7 +30,7 @@ class ConverterScreen extends StatelessWidget {
       return Container(
         margin: EdgeInsets.all(8.0),
         padding: EdgeInsets.all(16.0),
-        child: Scaffold(body:Column(
+        child: Column(
           children: <Widget>[
             Text(
               unit.name,
@@ -41,7 +41,6 @@ class ConverterScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headline,
             ),
           ],
-        ),
       );
     }).toList();
 
