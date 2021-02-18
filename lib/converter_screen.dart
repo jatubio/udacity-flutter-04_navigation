@@ -45,7 +45,7 @@ class ConverterScreen extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          title: this.title,
+          title: Text(this.title),
           backgroundColor: this.color,
         ),
         floatingActionButton: FloatingActionButton(
