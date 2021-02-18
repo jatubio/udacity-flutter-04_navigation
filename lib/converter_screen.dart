@@ -30,17 +30,19 @@ class ConverterScreen extends StatelessWidget {
       return Container(
         margin: EdgeInsets.all(8.0),
         padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Text(
-              unit.name,
-              style: Theme.of(context).textTheme.headline,
-            ),
-            Text(
-              'Conversion: ${unit.conversion}',
-              style: Theme.of(context).textTheme.headline,
-            ),
-          ],
+        child: Scaffold(
+          body: Column(
+            children: <Widget>[
+              Text(
+                unit.name,
+                style: Theme.of(context).textTheme.headline,
+              ),
+              Text(
+                'Conversion: ${unit.conversion}',
+                style: Theme.of(context).textTheme.headline,
+              ),
+            ],
+          ),
         ),
       );
     }).toList();
