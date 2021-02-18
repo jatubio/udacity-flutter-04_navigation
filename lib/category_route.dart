@@ -42,8 +42,7 @@ class CategoryRoute extends StatelessWidget {
       categories.add(Category(_categoryNames[i], Icons.cake, _baseColors[i]));
     }
 
-    // TODO: implement build
-    final ListView = Container(
+    final listView = Container(
       color: _backGroundColor,
       padding: EdgeInsets.symmetric(horizontal: 8),
       child: _buildCategoryWidgets(categories),
@@ -64,7 +63,7 @@ class CategoryRoute extends StatelessWidget {
 
     return Scaffold(
       appBar: appBar,
-      body: ListView,
+      body: listView,
     );
   }
 }
