@@ -68,7 +68,7 @@ class Category extends StatelessWidget {
             splashColor: color,
             // TODO: Update this onTap property to call _navigateToConverter()
             onTap: () {
-              _navigateToConverter();
+              _navigateToConverter(context);
             },
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
