@@ -16,7 +16,7 @@ class ConverterScreen extends StatelessWidget {
   // TODO: Pass in the [Category]'s color
   const ConverterScreen({
     @required this.units,
-    @requited this.title,
+    @required this.title,
     @required this.color,
   })  : assert(units != null),
         assert(title != null),
