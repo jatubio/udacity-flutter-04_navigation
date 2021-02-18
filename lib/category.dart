@@ -25,9 +25,9 @@ class Category extends StatelessWidget {
     // TODO: Using the Navigator, navigate to the [ConverterScreen]
     Navigator.push(
       context,
-      Scaffold(
-        body: MaterialPageRoute(
-          builder: (context) => ConverterScreen(
+      MaterialPageRoute(
+          builder: (context) => Scaffold(
+        body: ConverterScreen(
             units: units,
             title: name,
             color: color,
