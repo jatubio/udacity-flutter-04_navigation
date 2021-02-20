@@ -22,16 +22,15 @@ class Category extends StatelessWidget {
 
   /// Navigates to the [ConverterScreen].
   void _navigateToConverter(BuildContext context) {
-    // TODO: Using the Navigator, navigate to the [ConverterScreen]
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => ConverterScreen(
-            units: units,
-            title: name,
-            color: color,
-          ),
+        builder: (context) => ConverterScreen(
+          units: units,
+          title: name,
+          color: color,
         ),
+      ),
     );
   }
 
@@ -72,7 +71,6 @@ class Category extends StatelessWidget {
             borderRadius: _borderRadius,
             highlightColor: color,
             splashColor: color,
-            // TODO: Update this onTap property to call _navigateToConverter()
             onTap: () {
               _navigateToConverter(context);
             },
