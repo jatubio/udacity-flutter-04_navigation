@@ -13,7 +13,6 @@ class ConverterScreen extends StatelessWidget {
   final Color color;
 
   /// This [ConverterScreen] requires the color and units to not be null.
-  // TODO: Pass in the [Category]'s color
   const ConverterScreen({
     @required this.units,
     @required this.title,
@@ -26,7 +25,6 @@ class ConverterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Here is just a placeholder for a list of mock units
     final unitWidgets = units.map((Unit unit) {
-      // TODO: Set the color for this Container
       return Container(
         margin: EdgeInsets.all(8.0),
         padding: EdgeInsets.all(16.0),
@@ -34,19 +32,31 @@ class ConverterScreen extends StatelessWidget {
           children: <Widget>[
             Text(
               unit.name,
-              style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               'Conversion: ${unit.conversion}',
-              style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline5,
             ),
           ],
         ),
       );
     }).toList();
 
-    return ListView(
-      children: unitWidgets,
+    return Scaffold(
+      body: ListView(
+        children: unitWidgets,
+      ),
+      appBar: AppBar(
+        title: Text(this.title),
+        backgroundColor: this.color,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.arrow_back),
+        onPressed: () {
+          _navigateToConverter(context);
+        },
+      ),
     );
   }
 
