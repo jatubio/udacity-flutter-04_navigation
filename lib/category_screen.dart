@@ -8,8 +8,15 @@ final _backGroundColor = Colors.green[100];
 ///
 /// This is the 'home' screen of the Unit Converter. It shows a header and
 /// a list of [Categories].
-class CategoryScreen extends StatelessWidget {
+class CategoryScreen extends StatefulWidget {
   const CategoryScreen();
+
+  @override
+  State<StatefulWidget> createState() => _CategoryScreenState();
+}
+
+class _CategoryScreenState extends State<CategoryScreen> {
+  final _categories = <Category>[];
 
   static const _categoryNames = <String>[
     'Length',
@@ -56,21 +63,10 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final categories = <Category>[];
-
-    for (var i = 0; i < _categoryNames.length; i++) {
-      categories.add(Category(
-        name: _categoryNames[i],
-        icon: Icons.cake,
-        color: _baseColors[i],
-        units: _retrieveUnitList(_categoryNames[i]),
-      ));
-    }
-
     final listView = Container(
       color: _backGroundColor,
       padding: EdgeInsets.symmetric(horizontal: 8),
-      child: _buildCategoryWidgets(categories),
+      child: _buildCategoryWidgets(_categories),
     );
 
     final appBar = AppBar(
@@ -90,5 +86,19 @@ class CategoryScreen extends StatelessWidget {
       appBar: appBar,
       body: listView,
     );
+  }
+
+  @override
+  void initState() {
+    for (var i = 0; i < _categoryNames.length; i++) {
+      _categories.add(Category(
+        name: _categoryNames[i],
+        icon: Icons.cake,
+        color: _baseColors[i],
+        units: _retrieveUnitList(_categoryNames[i]),
+      ));
+    }
+
+    super.initState();
   }
 }
